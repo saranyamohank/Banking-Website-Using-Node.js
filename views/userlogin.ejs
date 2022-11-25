@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <section class="box">
+        
+        <div class="form">
+            <h2>User Login</h2>
+            <div id="msg"></div>
+            
+                <input type="text" name="username" class="input-field" placeholder="Username" id="username" />
+                <input type="password" name="password" class="input-field" placeholder="Password" id="password" />
+                <button  class="btn" value="LOGIN" onclick="login()">LOGIN</button>
+
+            
+        </div>
+    </section>
+    <script>
+        function login(){
+    const username=document.getElementById('username').value
+    const password=document.getElementById('password').value
+    console.log(username,password);
+        if(username && password )
+        {
+            fetch('http://localhost:3232/login_backend',{
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            // Adding body or contents to send
+            body: JSON.stringify({
+                username:username,
+                password:password
+        
+            }),
+            mode: 'cors'
+            // Adding headers to the request
+          
+            })
+            .then(res=>{
+                if(res.ok)
+                {
+                    return res.json()
+                }
+                else{
+                    var msg=document.getElementById('msg')
+                
+                    msg.innerHTML='<div class="alert alert-danger" id="succ_msg" role="alert">Incorrect Username or Password</div>'
+                   }
+            
+            })
+            .then((data)=>{
+              
+              console.log(data)
+
+              localStorage.setItem('token',data.token)
+              localStorage.setItem('username',data.username)
+              window.location.replace('/dashboard/'+data.token)
+
+            })
+            .catch(err=>{
+              console.log(err);
+            })
+            .catch(err=>{
+              console.log(err);
+            })
+        } 
+    }
+    </script>
+</body>
+</html>

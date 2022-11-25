@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="assets/account_view.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div>
+    <h1 id="main">Customer Details</h1>
+  <table class="table table-secondary table-bordered" id="tabletag">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone No.</th>
+        <th>Email</th>
+        <th>Marital Status</th>
+        <th>City</th>
+        <th>Balance</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% usertable.forEach(function(user){ %>
+            <tr>
+                <td><%=user.accountnumber%></td>
+                <td><%= user.name %></td>
+                <td><%=user.age%></td>
+                <td><%=user.gender%></td>
+                <td><%=user.mobile%></td>
+                <td><%=user.mail%></td>
+                <td><%=user.marital%></td>
+                <td><%=user.city%></td>
+                <td><%= user.balance %></td>
+                <td>
+                    <a href="account_edit/<%= user.accountnumber %>" class="btn btn-sm btn-primary" id="edit">Edit</a>
+                    <a href="delete/<%= user.accountnumber %>" class="btn btn-sm btn-primary"id="edit">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+
+    </tbody>
+
+  </table>
+  <a href="/adduser" class="btn btn-sm btn-primary" id="btn">Add User</a><br/><br/>
+
+</div>
+
+</body>
+</html>

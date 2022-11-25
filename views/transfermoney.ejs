@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link rel="stylesheet" href="assets/transferamount.css">
+</head>
+<body>
+    <section class="box">
+        <div class="form">
+            <h2>Transfer Money</h2>
+            <form  action="/transfermoney" method="POST">
+                Sender Account Number<input type="number" size="40"  name="senderacc" id="sender" /><br><br><br>
+               Receiver Account Number <input type="number" size="40"  name="accountnumber"  id="receiver"/><br><br><br>
+               Receiver's Name <input type="text" size="40" id="Name" name="receivername" /><br><br><br>
+               Amount <input type="number" size="40" id="Amount" name="amount" /><br><br><br>
+
+                
+                <p>
+                    <button  class="btn" value="Transfer">TRANSFER</button>
+                </p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

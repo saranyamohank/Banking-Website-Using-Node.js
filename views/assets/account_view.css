@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(-45deg,#7f379b,#ffa26c);
+}
+
+#main{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30%;
+}
+#btn{
+    width: 10%;
+    height: 40px;
+    background-color: #7f379b;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 61%;
+}
+#edit{
+    width: 60px;
+    margin-top: 4px;
+    text-align: center;
+    margin-left: 30px;
+}
+#tabletag{
+margin-left: 15%;
+margin-top: 5%;
+margin-bottom: 5%;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Home Page</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/assets/welcome.css" rel="stylesheet" />
+    </head>
+    <body>
+    
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <div class="m-4 m-lg-5" id="welcome">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content-->
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+
+                        <div class="card bg-light border-0 h-100" >
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+
+                                <h2 class="fs-4 fw-bold">Customer Account</h2>
+                               <a href="/account_view"> <p class="mb-0">Click here to view ,edit and deactivate customer account.</p></a>
+
+                               </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">Withdraw Amount</h2>
+                               <a href="/withdraw"> <p class="mb-0">Click here to Withdraw</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                <h2 class="fs-4 fw-bold">Deposit Amount</h2>
+                               <a href="/deposit"> <p class="mb-0">Click here to Deposit</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+            
+                
+                </div>
+            </div>
+        </section>
+        <script src="/assets/logout.js"></script>
+   
+        <script>
+         document.getElementById("welcome").innerHTML=`<h1 class="display-5 fw-bold">welcome ${localStorage.getItem("username")} !</h1>`
+
+
+
+        </script>    
+    </body>
+</html>

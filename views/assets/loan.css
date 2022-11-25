@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg,#7f379b,#ffa26c);
+}
+
+.calculator{
+    width: 400px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 15px #00000033;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.form{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.input-field{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1em;
+    color: #000;
+    background-color: #e2c4e0;
+    letter-spacing: 1px;
+}
+.input-field::placeholder{
+    color: #303030;
+}
+
+#bal{
+    width:300px;
+    height: 50px;
+    border-radius: 7px;
+    text-align: center;
+    background-color: #e2c4e0;
+    border:3px solid black;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+
+}
+#return{
+    text-align: center;
+    padding-top: 6px;
+}
+
+
+#submit{
+    width: 30%;
+    height: 35px;
+    background-color: #7f379b;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1em;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#amount{
+    border-radius: 2px;
+    width:200px;
+    height: 22px;
+    border: 2px solid black;
+    margin-left: 44px;
+
+}
+#rate{
+    border-radius: 2px;
+    width:200px;
+    height: 22px;
+    border: 2px solid black;
+margin-left: 46px;
+}
+#months{
+    border-radius: 2px;
+    width:200px;
+    height: 22px;
+    border: 2px solid black;
+
+
+
+
+}

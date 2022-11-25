@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Loan Calculator</title>
+    <link rel="stylesheet" href="assets/loan.css">
+
+</head>
+<body>
+    <section class="calculator">
+	<div class="form">
+		<h1 id="loantag">Loan Calculator</h1>
+        <br><br>
+
+		<form>
+            Amount <input type="number" size="40" id="amount" name="amount" /><br><br><br>
+            Interest <input type="text" size="40" id="rate" name="interest" /><br><br><br>
+            Months to pay <input type="number" size="40" id="months" name="months" /><br><br><br>
+
+                
+        </form>
+
+    <input type="button" value="Submit" id="submit" onclick="Calculate()"/>
+    <div id="bal"><h1 id="return"></h1></div>
+	</div>
+</section>
+<script src="/assets/loan.js"></script>
+</body>
+</html>
